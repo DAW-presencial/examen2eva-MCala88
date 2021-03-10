@@ -60,9 +60,9 @@
         
         
      <div class="form-group row">
-        <label for="Direccior_apell" class="col-sm-2 col-form-label">Direcctor_apell</label>
+        <label for="Director_apell" class="col-sm-2 col-form-label">Director_apell</label>
         <div class="col-sm-4">
-        <input name="Direccior_apell" type="text" class="form-control" id="input7" placeholder="Primer Apellido" value="{{ old('Director_apell') }} required>
+        <input name="Director_apell" type="text" class="form-control" id="input7" placeholder="Director_apell" value="{{ old('Director_apell') }} required>
         </div>
     </div>
         

@@ -24,7 +24,35 @@ class CenDocenteController extends Controller
      */
     public function create()
     {
-        //
+        $request->validate([
+            'Denominacion'=>'required',
+            'Codigo'=>'required',
+            'CIF'=>'required',
+            'Titularidad'=>'required',
+            'Dir_postal'=>'required',
+            'CP'=>'required', 
+            'Director_nom'=>'required',
+            'Director_apell'=>'required', 
+            'Drector_apell2'=>'required',   
+            'Identificada'=>'required',
+            'Tipo_identificada'=>'required',
+        ]);
+
+        DB::table('cen_docentes')->insert([
+            "Denominacion" => $request->Denominacion,
+            "Codigo" => $request->Codigo,
+            "CIF" => $request->CIF,
+            "Titularidad" => $request->Titularidad,
+            "Dir_postal" => $request->Dir_postal,
+            "CP" => $request->CP,
+            "Director_nom" => $request->Director_nom,
+            "Director_apell" => $request->Director_apell,
+            "Director_apell2" => $request->Director_apell2,
+            "Identificada" => $request->Identificada,
+            "Tipo_identificada" => $request->Tipo_identificada
+        ]);
+
+        return $request;
     }
 
     /**
@@ -33,7 +61,7 @@ class CenDocenteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+public function store(Request $request)
     {
         //
     }
