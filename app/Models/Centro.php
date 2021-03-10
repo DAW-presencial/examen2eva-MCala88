@@ -11,7 +11,7 @@ class Centro extends Model
     protected $table = "cen_docentes";
 
     protected $fillable = [
-         'Denominacion',
+            'Denominacion',
             'Codigo',
             'CIF',
             'Titularidad',
