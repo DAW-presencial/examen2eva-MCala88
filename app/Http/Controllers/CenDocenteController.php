@@ -33,7 +33,7 @@ class CenDocenteController extends Controller
             'CP'=>'required', 
             'Director_nom'=>'required',
             'Director_apell'=>'required', 
-            'Drector_apell2'=>'required',   
+            'Director_apell2'=>'required',   
             'Identificada'=>'required',
             'Tipo_identificada'=>'required',
         ]);
@@ -110,4 +110,6 @@ public function store(Request $request)
     {
         //
     }
+    
+    
 }

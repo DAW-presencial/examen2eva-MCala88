@@ -17,4 +17,6 @@ Route::post('/', 'CenDocenteController@destroy')->name('homeDestroy');
 
 
 
-Route::resource('/datos',CenDocenteController::class);
+Route::get('/', function () {
+    return redirect()->route("cen_docentes/create");
+});
