@@ -2,42 +2,90 @@
 
 @section('form')
 
-<h1>Formulario:</h1>
+<h1>Formulario centro:</h1>
 
 <div class="container">
-    <form method="POST" action="{{ route('form') }}">
-        @csrf
+    <form method="POST" action="{{ route('Centre') }}">
 
     <div class="form-group row">
-        <label for="name" class="col-sm-2 col-form-label">Nombre</label>
-        <div class="col-sm-8">
-        <input name="name" type="text" class="form-control" id="input1s" placeholder="Nombre">
+        <label for="name" class="col-sm-2 col-form-label">Denominacion</label>
+        <div class="col-sm-4">
+        <input name="name" type="text" class="form-control" id="input1" placeholder="Nombre" value="{{ old('Denominacion') }}>
         </div>
     </div>
-    <div class="form-group row">
-        <label for="lastname1" class="col-sm-2 col-form-label">Direccion</label>
+        
+     <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Codigo</label>
         <div class="col-sm-4">
-        <input name="lastname1" type="text" class="form-control" id="input2" placeholder="Primer Apellido">
+        <input name="name" type="text" class="form-control" id="input2" placeholder="Nombre" value="{{ old('Codigo') }}>
         </div>
     </div>
+        
     <div class="form-group row">
-        <label for="lastname2" class="col-sm-2 col-form-label">CP</label>
+        <label for="CIF" class="col-sm-2 col-form-label">CIF</label>
         <div class="col-sm-4">
-        <input name="lastname2" type="text" class="form-control" id="input3" placeholder="Segundo Apellido">
+        <input name="CIF" type="text" class="form-control" id="input3" placeholder="CIF" value="{{ old('CIF') }}>
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <select for="Titularidad" class="col-sm-2 col-form-label">Titularidad</select>
+        <div class="col-sm-4">
+          <option value="nif" {{ old("Titularidad") == "nif" ? "Publica" : "" }}>Publica</option>
+          <option value="nie" {{ old("Titularidad") == "nie" ? "Concertado" : "" }}>Concertado</option>
+           <option value="pasaporte" {{ old("Titularidad") == "Privado" ? "selected" : "" }}>Privado</option>
+        </div>
+    </div>
+        
+        <div class="form-group row">
+        <label for="Dir_postal" class="col-sm-2 col-form-label">Dir_postal</label>
+        <div class="col-sm-4">
+        <input name="Dir_postal" type="text" class="form-control" id="input4" placeholder="Dir_postal" value="{{ old('Dir_postal') }}>
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <label for="CP" class="col-sm-2 col-form-label">CP</label>
+        <div class="col-sm-4">
+        <input name="CP" type="text" class="form-control" id="input5" placeholder="CP" value="{{ old('CP') }}>
         </div>
     </div>
 
-    <div class="form-group row">
-        <label for="phone" class="col-sm-2 col-form-label">Teléfono</label>
+        <div class="form-group row">
+        <label for="Director_nom" class="col-sm-2 col-form-label">Director_nom</label>
         <div class="col-sm-4">
-        <input name="phone" type="text" class="form-control" id="input4" placeholder="Teléfono">
+        <input name="Director_nom" type="text" class="form-control" id="input6" placeholder="Director_nom" value="{{ old('Director_nom') }}>
+        </div>
+    </div>    
+        
+        
+     <div class="form-group row">
+        <label for="Direccior_apell" class="col-sm-2 col-form-label">Direcctor_apell</label>
+        <div class="col-sm-4">
+        <input name="Direccior_apell" type="text" class="form-control" id="input7" placeholder="Primer Apellido" value="{{ old('Director_apell') }}>
         </div>
     </div>
+        
     <div class="form-group row">
-        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <label for="Direcctor_apell2" class="col-sm-2 col-form-label">Direcctor_apell2</label>
         <div class="col-sm-4">
-        <input name="email" type="email" class="form-control" id="input5" placeholder="Email">
+        <input name="Direcctor_apell2" type="text" class="form-control" id="input8" placeholder="Direcctor_apell2" value="{{ old('Director_apell2') }}>
         </div>
     </div>
+        
+    <div class="form-group row">
+        <label for="Identificada" class="col-sm-2 col-form-label">Identificada</label>
+        <div class="col-sm-4">
+        <input name="Identificada" type="text" class="form-control" id="input9" placeholder="Identificada" value="{{ old('Identificada') }}>
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <label for="Tipo_identificadal" class="col-sm-2 col-form-label">Tipo_identificada</label>
+        <div class="col-sm-4">
+        <input name="Tipo_identificada" type="Tipo_identificada" class="form-control" id="input10" placeholder="Tipo_identificada" value="{{ old('Tipo_identificada') }}>
+        </div>
+    </div>
+      
 </div>
 @endsection
